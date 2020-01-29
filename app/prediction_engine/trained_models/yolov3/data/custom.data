@@ -1,0 +1,4 @@
+classes=57
+train=data/custom_50.txt
+valid=data/custom_50.txt
+names=data/custom.names
