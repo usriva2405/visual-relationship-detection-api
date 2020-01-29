@@ -8,7 +8,7 @@
 This project is addendum to a larger work in liaison with others. However, the published code is entirely mine, and nothing shared in this repository breaches the sanctity of research. Any proposal discussed is also common public domain knowledge, and the actual model implementing it has been withheld.<br /><br />
 Further, no model weights have been published so as to ensure no harm comes to this research. <br />
 
-*_Once research completes, with cognizance of the team, will publish the models/ weights as well, because we believe Deep Learning Community growth happens exponentially when there is sharing of published research in public domain._* 
+*_Once research completes, with cognizance of the team, will publish the models/ weights as well, because Deep Learning Community growth happens exponentially when there is sharing of published research in public domain._* 
  
 ## Dataset
 The training dataset was derived from [Open Image Dataset v5](https://storage.googleapis.com/openimages/web/index.html) and contains 329 relationship triplets with 375k training samples. These include both human-object relationships (e.g. "woman playing guitar", "man holding microphone"), object-object relationships (e.g. "beer on table", "dog inside car"), and also considers object-attribute relationships (e.g."handbag is made of leather" and "bench is wooden").
