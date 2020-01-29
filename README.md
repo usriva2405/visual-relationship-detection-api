@@ -29,7 +29,7 @@ Given the nature of training data, each relationship can be decomposed into foll
 1. `Subject Label` (L<sub>s</sub>) -> `Relation` (R<sub>o</sub>) -> `Object` (L<sub>o</sub>) : _Bag Pack at Table_
 2. `Label` (L<sub>o</sub>) -> `is` -> `Attribute` (A<sub>l</sub>) : _Table is Wooden_
 
-Hence when compounding a description, following structure is achieved
+Hence when compounding a description, following structure is achieved <br /><br />
 ((L<sub>s</sub>) (A<sub>l1</sub>)) -> (R<sub>o</sub>) -> ((L<sub>o</sub>) (A<sub>l2</sub>)) <br />
 e.g. Bag Pack made of Fabric at Table which is Transparent <br /><br />
 or a simplified version <br /> <br />
