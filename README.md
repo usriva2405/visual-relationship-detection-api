@@ -68,9 +68,9 @@ This is a python project, and should run fine on version >= 3.
     source /usr/local/bin/virtualenvwrapper.sh
     
     workon
-    mkvirtualenv audit_logger
+    mkvirtualenv visual_relations
     ```
-    This setups up a new virtualenv called audit_logger. <br />
+    This setups up a new virtualenv called visual_relations. <br />
 
 3. Install the required libraries for this project
 
@@ -99,17 +99,17 @@ There are 3 ways to run this directly (locally)
     
     ```shell
     python app/controller/flask_controller.py
-    curl http://127.0.0.1:5002      # prints Welcome to Audit-Logger
+    curl http://127.0.0.1:5002      # prints Welcome to Visual Relationship Prediction!
     ```
     
-    If the project has been setup, this prints ***Welcome to Audit-Logger*** on console
+    If the project has been setup, this prints ***Welcome to Visual Relationship Prediction!*** on console
 
 2. Using WSGI Server for running app (without config)
 
     You can also use following for running the app : 
     ```shell
     gunicorn -b localhost:5002 -w 1 app.controller.flask_controller:app
-    curl http://127.0.0.1:5002      # prints Welcome to Audit-Logger
+    curl http://127.0.0.1:5002      # prints Welcome to Visual Relationship Prediction!
     ```
     App would be accessible on http://127.0.0.1:8880<br /><br />
 
