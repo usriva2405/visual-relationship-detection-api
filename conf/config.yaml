@@ -51,7 +51,7 @@ DEV:
         label_encoder: label_encoder.pkl
         attribute_encoder: revised_attribute_encoder.pkl
 
-STAGING:
+DEV:
   mongodb:
     url: mongodb://127.0.0.1:27017/visualRelations
     db: visualRelations
@@ -74,6 +74,7 @@ STAGING:
         model_weights: custom-yolov3-spp_final.weights
         model_config: custom-yolov3-spp.cfg
         model_labels: yolo_description.names
+        relationship_labels: custom.names
       retinanet:
         data_location: ""
         weights_location: ""
@@ -81,24 +82,37 @@ STAGING:
         model_weights: ""
         model_config: ""
         model_labels: ""
-    encoders:
-      encoder_location: app/prediction_engine/trained_models/other_relations/weights/
-      label_encoder: label_encoder.pkl
-      relationship_encoder: relationship_encoder.pkl
-      attribute_encoder: ""
+    other_relations:
+      model_location: app/prediction_engine/trained_models/other_relations/weights/
+      model_architecture: model_architecture_200103.json
+      model_weights: model_weights_200103.h5
+      encoders:
+        encoder_location: app/prediction_engine/trained_models/other_relations/weights/
+        label_encoder: label_encoder.pkl
+        relationship_encoder: relationship_encoder.pkl
+    is_relations:
+      model_location: app/prediction_engine/trained_models/is_relations/weights/
+      data_location: app/prediction_engine/trained_models/is_relations/data/
+      model_architecture: is_model_architecture_200124.json
+      model_weights: is_model_weights_200124.h5
+      relationship_labels: is_labels.names
+      encoders:
+        encoder_location: app/prediction_engine/trained_models/is_relations/weights/
+        label_encoder: label_encoder.pkl
+        attribute_encoder: revised_attribute_encoder.pkl
 
-PROD:
+DEV:
   mongodb:
     url: mongodb://127.0.0.1:27017/visualRelations
     db: visualRelations
   namespace:
     dns: http://127.0.0.1:5000/
   cache:
-    redis_url: redis://h:p5c7f90b9d1b59e8b344f56c66fd89ad90bfc02e55d181f53386f01a096c7bed7@ec2-3-225-205-83.compute-1.amazonaws.com:18209
-    redis_host: ec2-3-225-205-83.compute-1.amazonaws.com
-    redis_user: h
-    redis_port: 18209
-    redis_password: p5c7f90b9d1b59e8b344f56c66fd89ad90bfc02e55d181f53386f01a096c7bed7
+    redis_url: redis://127.0.0.1:6379
+    redis_host: 127.0.0.1
+    redis_user: ""
+    redis_port: 6379
+    redis_password: ""
     ttl: 180
     max_size: 10000
   trained_models:
@@ -110,6 +124,7 @@ PROD:
         model_weights: custom-yolov3-spp_final.weights
         model_config: custom-yolov3-spp.cfg
         model_labels: yolo_description.names
+        relationship_labels: custom.names
       retinanet:
         data_location: ""
         weights_location: ""
@@ -117,8 +132,21 @@ PROD:
         model_weights: ""
         model_config: ""
         model_labels: ""
-    encoders:
-      encoder_location: app/prediction_engine/trained_models/other_relations/weights/
-      label_encoder: label_encoder.pkl
-      relationship_encoder: relationship_encoder.pkl
-      attribute_encoder: ""
+    other_relations:
+      model_location: app/prediction_engine/trained_models/other_relations/weights/
+      model_architecture: model_architecture_200103.json
+      model_weights: model_weights_200103.h5
+      encoders:
+        encoder_location: app/prediction_engine/trained_models/other_relations/weights/
+        label_encoder: label_encoder.pkl
+        relationship_encoder: relationship_encoder.pkl
+    is_relations:
+      model_location: app/prediction_engine/trained_models/is_relations/weights/
+      data_location: app/prediction_engine/trained_models/is_relations/data/
+      model_architecture: is_model_architecture_200124.json
+      model_weights: is_model_weights_200124.h5
+      relationship_labels: is_labels.names
+      encoders:
+        encoder_location: app/prediction_engine/trained_models/is_relations/weights/
+        label_encoder: label_encoder.pkl
+        attribute_encoder: revised_attribute_encoder.pkl
