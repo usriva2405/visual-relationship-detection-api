@@ -64,7 +64,13 @@ This is a python project, and should run fine on version >= 3.
     mkdir ~/.virtualenvs
     
     pip3 install virtualenvwrapper
-    export WORKON_HOME=~/Envs
+    
+    # Add following to bash_profile
+    export WORKON_HOME=$HOME/.virtualenvs
+    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+    export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+    source ~/.bash_profile
+    
     source /usr/local/bin/virtualenvwrapper.sh
     
     workon
