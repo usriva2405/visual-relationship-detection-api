@@ -12,7 +12,7 @@ confuse==1.0.0
 cycler==0.10.0
 cymem==2.0.3
 decorator==4.4.1
-Django==3.0.2
+Django==3.1.6
 dlib==19.18.0
 easydict==1.9
 Flask==1.1.1
