@@ -16,7 +16,7 @@ Django==3.0.2
 dlib==19.18.0
 easydict==1.9
 Flask==1.1.1
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 gast==0.2.2
 google-pasta==0.1.7
 graphviz==0.8.4
