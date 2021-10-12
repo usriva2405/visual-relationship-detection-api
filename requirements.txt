@@ -44,7 +44,7 @@ murmurhash==1.0.2
 mxnet==1.5.1.post0
 networkx==2.4
 numpy==1.18.0
-opencv-contrib-python==4.1.2.30
+opencv-contrib-python==4.2.0.32
 opencv-python==4.1.2.30
 opt-einsum==3.1.0
 pandas==0.25.1
