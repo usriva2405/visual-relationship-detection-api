@@ -72,7 +72,7 @@ spacy==2.2.3
 sqlparse==0.3.0
 srsly==1.0.1
 tensorboard==2.0.0
-tensorflow==2.0.1
+tensorflow==2.7.2
 tensorflow-estimator==2.0.1
 termcolor==1.1.0
 thinc==7.3.1
